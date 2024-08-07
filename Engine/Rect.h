@@ -11,7 +11,7 @@ public:
 	Rect(Vec2 topLeft, int width, int height);
 
 
-private:
+public:
 	int left;
 	int top;
 	int right;
