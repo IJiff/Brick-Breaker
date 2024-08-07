@@ -24,7 +24,8 @@
 Game::Game( MainWindow& wnd )
 	:
 	wnd( wnd ),
-	gfx( wnd )
+	gfx( wnd ),
+	rect(Vec2(100, 100), Vec2(200, 250))
 {
 }
 
@@ -40,6 +41,6 @@ void Game::UpdateModel()
 {
 }
 
-void Game::ComposeFrame()
-{
+void Game::ComposeFrame(){
+	gfx.DrawRect(rect, Colors::Cyan);
 }

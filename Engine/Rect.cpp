@@ -10,10 +10,10 @@ Rect::Rect(int inLeft, int inTop, int inRight, int inBottom) :
 }
 
 Rect::Rect(Vec2 topLeft, Vec2 bottomRight) {
-	Rect(topLeft.x, topLeft.y, bottomRight.x, bottomRight.y);
+	Rect(int(topLeft.x), int(topLeft.y), int(bottomRight.x), int(bottomRight.y));
 }
 
 Rect::Rect(Vec2 topLeft, int width,int height) {
-	Rect(topLeft, Vec2(width, height));
+	Rect(topLeft, Vec2(float(width), float(height)));
 }
 
