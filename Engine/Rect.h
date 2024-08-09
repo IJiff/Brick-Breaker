@@ -5,6 +5,7 @@
 
 class Rect {
 public:
+	Rect() = default;
 	Rect(int inLeft, int inTop, int inRight, int inBottom);
 	Rect(Vec2 topLeft, Vec2 bottomRight);
 	Rect(Vec2 topLeft, int width, int height);

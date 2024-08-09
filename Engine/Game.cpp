@@ -25,7 +25,7 @@ Game::Game( MainWindow& wnd )
 	:
 	wnd( wnd ),
 	gfx( wnd ),
-	rect(Vec2(100, 100), Vec2(200, 250))
+	rect(100, 100, 200, 200)
 {
 }
 
@@ -39,6 +39,7 @@ void Game::Go()
 
 void Game::UpdateModel()
 {
+	rect.left += 1;
 }
 
 void Game::ComposeFrame(){
