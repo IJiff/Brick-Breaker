@@ -17,3 +17,6 @@ Rect::Rect(Vec2 topLeft, int width,int height) {
 	Rect(topLeft, Vec2(float(width), float(height)));
 }
 
+bool Rect::IsColliding(const Rect& rect) const {
+	return left <= rect.right && right >= rect.left && top <= rect.bottom && bottom >= rect.top;
+}

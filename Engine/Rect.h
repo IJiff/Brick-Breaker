@@ -9,6 +9,7 @@ public:
 	Rect(int inLeft, int inTop, int inRight, int inBottom);
 	Rect(Vec2 topLeft, Vec2 bottomRight);
 	Rect(Vec2 topLeft, int width, int height);
+	bool IsColliding(const Rect& rect) const;
 
 
 public:
