@@ -24,6 +24,7 @@
 #include "Mouse.h"
 #include "Graphics.h"
 #include "Rect.h"
+#include "Ball.h"
 
 
 class Game
@@ -44,6 +45,7 @@ private:
 	Graphics gfx;
 	/********************************/
 	/*  User Variables              */
+	Ball ball;
 	Rect rect;
 	/********************************/
 };
