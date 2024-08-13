@@ -20,14 +20,12 @@
  ******************************************************************************************/
 #include "MainWindow.h"
 #include "Game.h"
-#include <iostream>
-
 
 Game::Game( MainWindow& wnd )
 	:
 	wnd( wnd ),
 	gfx( wnd ),
-	ball(784, 100, 787, 113, Vec2(3.0f, 3.0f))
+	rect(100, 100, 200, 200)
 {
 }
 
@@ -41,10 +39,9 @@ void Game::Go()
 
 void Game::UpdateModel()
 {
-	//ball.Move();
+	rect.left += 1;
 }
 
 void Game::ComposeFrame(){
-	ball.Draw(gfx);
 	gfx.DrawRect(rect, Colors::Cyan);
 }
