@@ -25,7 +25,7 @@ Game::Game( MainWindow& wnd )
 	:
 	wnd( wnd ),
 	gfx( wnd ),
-	rect(100, 100, 200, 200)
+	ball(300.0f,300.0f,1.0f,2.0f)
 {
 }
 
@@ -37,11 +37,11 @@ void Game::Go()
 	gfx.EndFrame();
 }
 
-void Game::UpdateModel()
-{
-	rect.left += 1;
+void Game::UpdateModel(){
+	ball.Move();
+	ball.WallCollision();
 }
 
 void Game::ComposeFrame(){
-	gfx.DrawRect(rect, Colors::Cyan);
+	ball.Draw(gfx);
 }
